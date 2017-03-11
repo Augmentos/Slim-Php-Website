@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kode is a Premium Bootstrap Admin Template, It's responsive, clean coded and mobile friendly">
+  <meta name="keywords" content="bootstrap, admin, dashboard, flat admin template, responsive," />
+  <title>{%block title%} {%endblock title%}</title>
+
+  <!-- ========== Css Files ========== -->
+  <link href="static/assets/css/root.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+      <link rel='shortcut icon' href='static/assets/img/favicon.ico' type='image/x-icon'/ >
+
+      <link href="static/assets/css/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body>
+  <!-- Start Page Loading -->
+  <div class="loading"><img src="static/assets/img/loading.gif" alt="loading-img"></div>
+  <!-- End Page Loading -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+  <!-- START TOP -->
+  <div id="top" class="clearfix">
+
+    <!-- Start App Logo -->
+    <div class="applogo">
+      <a href="static/assets/index.html" class="logo">AlmaConnect</a>
+    </div>
+    <!-- End App Logo -->
+
+    <!-- Start Sidebar Show Hide Button -->
+    <a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
+    <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a>
+    <!-- End Sidebar Show Hide Button -->
+
+    <!-- Start Searchbox -->
+   
+    <!-- End Searchbox -->
+
+    <!-- Start Top Menu -->
+   
+    <!-- End Top Menu -->
+
+    <!-- Start Sidepanel Show-Hide Button -->
+  
+    <!-- End Sidepanel Show-Hide Button -->
+
+    <!-- Start Top Right -->
+    <ul class="top-right">
+
+
+
+
+
+    <li class="dropdown link">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox" ><img src="static/assets/img/profileimg.png" alt="img"><span id="user"></span><span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
+          <li role="presentation" class="dropdown-header">Profile</li>
+          
+          <li><a href="logout"><i class="fa falist fa-power-off"></i> Logout</a></li>
+        </ul>
+    </li>
+
+    </ul>
+    <!-- End Top Right -->
+
+  </div>
+  <!-- END TOP -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+
+<!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START SIDEBAR -->
+<div class="sidebar clearfix">
+
+<ul class="sidebar-panel nav">
+    
+  <li class="sidetitle">MAIN</li>
+  <li><a href="dashboard"></span>Dashboard<span class="label label-default">2</span></a></li>
+
+  <li><a href="#"></span>Admins<span class="caret"></span></a>
+    <ul>
+      <li><a href="add-admin">Add Admin</a></li>
+      <li><a href="manage-admins">Manage Admins</a></li>
+    </ul>
+</li>
+  <li><a href="#"></span>Events<span class="caret"></span></a>
+    <ul>
+      <li><a href="add-event">Add Event</a></li>
+      <li><a href="manage-event">Manage Event</a></li>
+    </ul>
+</li>
+ <li><a href="#"></span>News<span class="caret"></span></a>
+    <ul>
+      <li><a href="add-news">Add News</a></li>
+      <li><a href="manage-news">Manage News</a></li>
+    </ul>
+</li>
+
+ <li><a href="#"></span>HomeSlider<span class="caret"></span></a>
+    <ul>
+      <li><a href="add-home-slider">Add Home Slider</a></li>
+      <li><a href="manage-home-slider">Manage Home Slider</a></li>
+    </ul>
+</li>
+
+  <li><a href="contact-request">Contact Requests</a></li>
+  <li><a href="service-requests">Service Requests</a>
+  </li>
+  <li><a href="profile">Profile </a>
+<!--
+    <ul>
+      <li><a href="../change-password.html">Change Password</a></li>
+    </ul>
+-->
+  </li>
+</ul>
+
+
+</div>
+<!-- END SIDEBAR -->
+<!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- Start Page Header -->
+  <div class="page-header">
+    <h1 class="title">{%block head%} {%endblock head%}</h1>
+      
+
+ 
+    <div class="right">
+      <div class="btn-group" role="group" aria-label="...">
+        <a href="a_index" class="btn btn-light">Dashboard</a>
+        <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
+        <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
+        <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
+      </div>
+    </div>
+    <!-- End Page Header Right Div -->
+
+  </div>
+  <!-- End Page Header -->
+
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START CONTAINER -->
+<div class="container-widget">
+
+ 
+  <div class="col-md-12">
+
+      
+      {%block body%}{%endblock body%}
+      
+
+      <br />
+      <br />
+      <br />
+      <!-- Start Footer -->
+<div class="row footer">
+  <div class="col-md-6 text-left">
+  Copyright © 2016 <a href="" target="_blank">SARC</a> All rights reserved.
+  </div>
+  <div class="col-md-6 text-right">
+    Design and Developed by <a href="" target="_blank">SARC</a>
+  </div> 
+</div>
+<!-- End Footer -->
+
+
+</div>
+<!-- End Content -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+
+
+
+<!-- ================================================
+jQuery Library
+================================================ -->
+<script type="text/javascript" src="static/assets/js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="static/assets/js/pnotify.custom.min.js"></script>
+
+    <script type="text/javascript" src="static/assets/js/handlebars-v4.0.5.js"></script>
+
+    <script type="text/javascript" src="static/assets/js/jquery.serializejson.min.js"></script>
+
+<!-- ================================================
+Bootstrap Core JavaScript File
+================================================ -->
+<script src="static/assets/js/bootstrap/bootstrap.min.js"></script>
+
+<!-- ================================================
+Plugin.js - Some Specific JS codes for Plugin Settings
+================================================ -->
+<script type="text/javascript" src="static/assets/js/plugins.js"></script>
+
+<!-- ================================================
+Bootstrap Select
+================================================ -->
+<script type="text/javascript" src="static/assets/js/bootstrap-select/bootstrap-select.js"></script>
+
+<!-- ================================================
+Bootstrap Toggle
+================================================ -->
+<script type="text/javascript" src="static/assets/js/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+
+<!-- ================================================
+Bootstrap WYSIHTML5
+================================================ -->
+<!-- main file -->
+<!--<script type="text/javascript" src="static/assets/js/bootstrap-wysihtml5/wysihtml5-0.3.0.min.js"></script>-->
+<!-- bootstrap file -->
+<!--<script type="text/javascript" src="static/assets/js/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>-->
+
+<!-- ================================================
+Summernote
+================================================ -->
+<!--<script type="text/javascript" src="../js/summernote/summernote.min.js"></script>-->
+
+<!-- ================================================
+Flot Chart
+================================================ -->
+<!-- main file -->
+<!--<script type="text/javascript" src="static/assets/js/flot-chart/flot-chart.js"></script>-->
+<!-- time.js -->
+<!--<script type="text/javascript" src="static/assets/js/flot-chart/flot-chart-time.js"></script>-->
+<!-- stack.js -->
+<!--<script type="text/javascript" src="static/assets/js/flot-chart/flot-chart-stack.js"></script>-->
+<!-- pie.js -->
+<!--<script type="text/javascript" src="static/assets/js/flot-chart/flot-chart-pie.js"></script>-->
+<!-- demo codes -->
+<!--<script type="text/javascript" src="static/assets/js/flot-chart/flot-chart-plugin.js"></script>-->
+
+<!-- ================================================
+Chartist
+================================================ -->
+
+
+    <!-- main file -->
+<!--<script type="text/javascript"jquery.serializejson.min.jsassets/js/chartist/chartist.js"></script>-->
+<!-- demo codes -->
+<!--<script type="text/javascript" src="static/assets/js/chartist/chartist-plugin.js"></script>-->
+
+<!-- ================================================
+Easy Pie Chart
+================================================ -->
+<!-- main file -->
+<!--<script type="text/javascript" src="static/assets/js/easypiechart/easypiechart.js"></script>-->
+<!-- demo codes -->
+<!--<script type="text/javascript" src="static/assets/js/easypiechart/easypiechart-plugin.js"></script>-->
+
+<!-- ================================================
+Sparkline
+================================================ -->
+<!-- main file -->
+<!--<script type="text/javascript" src="static/assets/js/sparkline/sparkline.js"></script>-->
+<!-- demo codes -->
+<!--<script type="text/javascript" src="static/assets/js/sparkline/sparkline-plugin.js"></script>-->
+
+<!-- ================================================
+Rickshaw
+================================================ -->
+<!-- d3 -->
+<!--<script src="static/assets/js/rickshaw/d3.v3.js"></script>-->
+<!-- main file -->
+<!--<script src="static/assets/js/rickshaw/rickshaw.js"></script>-->
+<!-- demo codes -->
+<!--<script src="static/assets/js/rickshaw/rickshaw-plugin.js"></script>-->
+
+<!-- ================================================
+Data Tables
+================================================ -->
+<script src="static/assets/js/datatables/datatables.min.js"></script>
+
+<!-- ================================================
+Sweet Alert
+================================================ -->
+<script src="static/assets/js/sweet-alert/sweet-alert.min.js"></script>
+
+<!-- ================================================
+Kode Alert
+================================================ -->
+<script src="static/assets/js/kode-alert/main.js"></script>
+
+<!-- ================================================
+Gmaps
+================================================ -->
+<!-- google maps api -->
+<!--<script src="http://maps.google.com/maps/api/js?sensor=true"></script>-->
+<!-- main file -->
+<!--<script src="static/assets/js/gmaps/gmaps.js"></script>-->
+<!-- demo codes -->
+<!--<script src="static/assets/js/gmaps/gmaps-plugin.js"></script>-->
+
+<!-- ================================================
+jQuery UI
+================================================ -->
+<script type="text/javascript" src="static/assets/js/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- ================================================
+Moment.js
+================================================ -->
+<script type="text/javascript" src="static/assets/js/moment/moment.min.js"></script>
+<script type="text/javascript" src="static/assets/js/api/loguser.js"></script>
+  <script id="a-templatee" type="text/x-handlebars-template">
+            
+             <b id="user">{{ '{{username}}' }}</b>
+              
+       
+            </script>
+
+
+
+<!-- ================================================
+Full Calendar
+================================================ -->
+<!--<script type="text/javascript" src="static/assets/js/full-calendar/fullcalendar.js"></script>-->
+
+<!-- ================================================
+Bootstrap Date Range Picker
+================================================ -->
+<!--<script type="text/javascript" src="static/assets/js/date-range-picker/daterangepicker.js"></script>-->
+
+{%block scripts%}{%endblock scripts%}
+    
+    
+
+
+
+</body>
+</html>

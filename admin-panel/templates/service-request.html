@@ -1,0 +1,126 @@
+
+ {% extends "a_frame.html" %}
+
+	     {% block title %} Service Requests {% endblock title %}
+
+{% block head %} Service Requests {% endblock head %}
+
+	      {% block body %}
+      <div class="panel panel-default">
+
+        <div class="panel-title">
+        Service Requests
+        </div>
+
+        <div class="panel-body table-responsive">
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Date</td>
+                <td>Message</td>
+                <td>Reply</td>
+              </tr>
+            </thead>
+            <tbody id="cbody">
+              
+            </tbody>
+          </table>
+      </div>
+    </div>
+      <!-- End Panel -->
+  </div>
+  <!-- End Row -->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+<!-- END CONTAINER -->
+
+
+
+<!-- For Replying  START-->
+<div class="panel-body">
+  <!-- Start Modal Code -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form action="#" method="POST">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Reply</h4>
+        </div>
+        <div class="modal-body">
+         <input class="form-control" name="emailid" placeholder="example@karunya.edu or NAME" type="email">
+         <br>
+         <textarea class="form-control" style="height:100px; padding-left:10px;" rows="3" id="textarea1" placeholder="Type your message..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-default">send</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- For reply END -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+ {% endblock %}
+
+
+{% block scripts %}
+
+<script id="a-template" type="text/x-handlebars-template">
+
+
+{{ '{{#each data}}' }}
+<div class="panel-body">
+  <!-- Start Modal Code
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form action="#" method="POST">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Reply</h4>
+        </div>
+        <div class="modal-body">
+         <input class="form-control" name="emailid"  value="{{ '{{email}}' }}" type="email" disabled id="hello">
+         <br>
+         <textarea class="form-control" style="height:100px; padding-left:10px;" rows="3" id="textarea1" placeholder="Type your message..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-default">send</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> 
+
+            <tr>
+            <td>{{ '{{s_no}}' }}</td>
+            <td>{{ '{{email}}' }}</td>
+                 <td>{{ '{{time}}' }}</td>
+                
+            <td>{{ '{{description}}' }}</td>
+    
+            
+<!--            <form id="admin_{{ '{{id}}' }}">-->
+         
+                <input type="hidden" id="user_id_{{'{{id}}'}}" value="{{'{{id}}'}}">
+       <!--      <td><a href="#" onclick="update_admin('{{ '{{id}}' }}');" class="btn btn-rounded btn-success">Save</a></td> -->
+            <td><a href="#" data-toggle="modal" data-target="#myModal"><button class="btn btn-default">Reply</button></a></td>
+           
+<!--            </form>-->
+            </tr>
+{{ '{{/each}}' }}
+      `
+</script>
+<script src="static/assets/js/api/service-request.js"></script>
+{% endblock scripts %}

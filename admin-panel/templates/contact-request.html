@@ -1,0 +1,149 @@
+
+ {% extends "a_frame.html" %}
+
+	     {% block title %} Contact Requests {% endblock title %}
+
+
+{% block head %} Contact Requests {% endblock head %}
+
+	      {% block body %}
+
+
+
+
+      <div class="panel panel-default">
+
+        <div class="panel-title">
+        Contact Requests
+        </div>
+
+        <div class="panel-body table-responsive">
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Date</td>
+                <td>Message</td>
+                </tr>
+            </thead>
+            <tbody id="cbody">
+              <!-- <tr>
+                <td><b>9652</b></td>
+                <td>John Doe</td>
+                <td>12/10/2015</td>
+                <td>As we got further and further away, it [the Earth] diminished in size.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+                <td><a href="#" data-toggle="modal" data-target="#myModal"><button class="btn btn-default">Reply</button></a></td>
+              </tr>
+              <tr>
+                <td><b>9652</b></td>
+                <td>Jonathan Doe</td>
+                <td>12/10/2015</td>
+                <td>As we got further and further away, it [the Earth] diminished in size.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+                <td><a href="#" data-toggle="modal" data-target="#myModal"><button class="btn btn-default">Reply</button></a></td>
+              </tr>
+              <tr>
+                <td><b>6962</b></td>
+                <td>pottan sharoon</td>
+                <td>12/10/2015</td>
+                <td>As we got further and further away, it [the Earth] diminished in size.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+                <td><a href="#" data-toggle="modal" data-target="#myModal"><button class="btn btn-default">Reply</button></a></td>
+              </tr> -->
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+    
+      <!-- End Panel -->
+  </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <!-- End Row -->
+</div>
+<!-- END CONTAINER -->
+
+
+
+<!-- For Replying  START-->
+
+
+<!-- For reply END -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+ {% endblock %}
+
+
+ {% block scripts %}
+
+<script id="a-template" type="text/x-handlebars-template">
+
+
+{{ '{{#each data}}' }}
+<div class="panel-body">
+  <!-- Start Modal Code
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form action="#" method="POST">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Reply</h4>
+        </div>
+        <div class="modal-body">
+         <input class="form-control" name="emailid"  value="{{ '{{Email}}' }}" type="email" disabled id="hello">
+         <br>
+         <textarea class="form-control" style="height:100px; padding-left:10px;" rows="3" id="textarea1" placeholder="Type your message..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-default">send</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    
+</div> 
+
+
+            <tr>
+            <td>{{ '{{Id}}' }}</td>
+            <td>{{ '{{Name}}' }}</td>
+            <td>{{ '{{Time}}' }}</td>
+            <td>{{ '{{Message}}' }}</td>
+            
+<!--            <form id="admin_{{ '{{id}}' }}">-->
+         
+                <input type="hidden" id="user_id_{{'{{id}}'}}" value="{{'{{id}}'}}">
+       <!--      <td><a href="#" onclick="update_admin('{{ '{{id}}' }}');" class="btn btn-rounded btn-success">Save</a></td> -->
+            <td><a href="#" data-toggle="modal" data-target="#myModal"><button class="btn btn-default">Reply</button></a></td>
+           
+<!--            </form>-->
+            </tr>
+{{ '{{/each}}' }}
+
+
+
+
+
+</script>
+<script src="static/assets/js/api/contact-request.js"></script>
+{% endblock scripts %}

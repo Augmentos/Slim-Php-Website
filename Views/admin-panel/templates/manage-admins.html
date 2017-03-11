@@ -1,0 +1,70 @@
+
+ {% extends "a_frame.html" %}
+
+	     {% block title %} Manage Admins {% endblock title %}
+
+{% block head %} Manage Admins {% endblock head %}
+
+	      {% block body %}
+
+
+<div class="panel panel-default">
+  	<div class="panel-title">Manage Admin</div>
+  	<div class="panel-body">
+  		<table class="table table-striped">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>E-mail</td>
+            <td>Password</td>
+            <td>Save</td>
+            <td>Delete</td>
+          </tr>
+        </thead> 
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td>Jon Doe</td>
+            <td>
+              <input type="email" name="mail" placeholder="johndoe@gmail.com">
+            </td>
+            <td><input type="password" name="pass" placeholder="password"></td>
+            <td><a href="#" class="btn btn-rounded btn-success">Save</a></td>
+            <td><a href="#" class="btn btn-rounded btn-danger">Delete</a></td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>Mike</td>
+            <td>
+              <input type="email" name="mail" placeholder="mike@gmail.com">
+            </td>
+            <td><input type="password" name="pass" placeholder="password"></td>
+            <td><a href="#" class="btn btn-rounded btn-success">Save</a></td>
+            <td><a href="#" class="btn btn-rounded btn-danger">Delete</a></td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>Drake</td>
+            <td>
+              <input type="email" name="mail" placeholder="drake@gmail.com">
+            </td>
+            <td><input type="password" name="pass" placeholder="password"></td>
+            <td><a href="#" class="btn btn-rounded btn-success">Save</a></td>
+            <td><a href="#" class="btn btn-rounded btn-danger">Delete</a></td>
+          </tr>
+        </tbody> 
+      </table>
+  	</div>
+  </div>
+  
+  </div>
+  <!-- End First Row -->
+
+
+
+</div>
+<!-- END CONTAINER -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+    {% endblock %}

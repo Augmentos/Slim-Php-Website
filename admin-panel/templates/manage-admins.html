@@ -1,0 +1,61 @@
+
+ {% extends "a_frame.html" %}
+
+	     {% block title %} Manage Admins {% endblock title %}
+
+{% block head %} Manage Admins {% endblock head %}
+
+	      {% block body %}
+
+
+<div class="panel panel-default">
+  	<div class="panel-title">Manage Admin</div>
+  	<div class="panel-body">
+  		<table class="table table-striped">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>E-mail</td>
+            <td>Password</td>
+            <td>Save</td>
+            <td>Delete</td>
+          </tr>
+        </thead> 
+        <tbody id="adminos">
+         
+        </tbody> 
+      </table>
+  	</div>
+  </div>
+  
+  </div> 
+  <!-- End First Row -->
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+    {% endblock %}
+
+{% block scripts %}
+<script id="a-template" type="text/x-handlebars-template">
+{{ '{{#each data}}' }}
+            <tr>
+            <td>{{ '{{id}}' }}</td>
+            <td>{{ '{{username}}' }}</td>
+<!--            <form id="admin_{{ '{{id}}' }}">-->
+           <td>
+              <input type="email" value="{{ '{{email}}' }}" name="data[email]" placeholder="johndoe@gmail.com"  id="user_{{ '{{id}}' }}">
+            </td>
+                <input type="hidden" id="user_id_{{'{{id}}'}}" value="{{'{{id}}'}}">
+            <td><input type="password" name="data[password]" placeholder="password" id="pass_{{ '{{id}}' }}"></td>
+            <td><a href="#" onclick="update_admin('{{ '{{id}}' }}');" class="btn btn-rounded btn-success">Save</a></td>
+            <td><a href="#" class="btn btn-rounded btn-danger" onclick="delete_admin('{{ '{{id}}' }}');" >Delete</a></td>
+<!--            </form>-->
+            </tr>
+{{ '{{/each}}' }}
+      `
+</script>
+<script src="static/assets/js/api/manage-admins.js"></script>
+{% endblock scripts %}

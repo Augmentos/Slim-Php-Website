@@ -1,0 +1,46 @@
+
+        {% extends "frame.html" %}
+
+        {% block title %} Events {% endblock title %}
+
+         {% block body %}
+         
+         <div id="page-content">
+   <div class="container">
+      <div class="row">
+      <div class="col-md-12">
+         <h1>Current and Upcoming Events</h1>
+         <div class="events" id="event_list" >
+            
+ 
+
+         </div>
+      </div>
+      </div></div></div>
+
+
+
+
+ {%endblock body%}
+
+ {% block scripts %}
+
+<script id="event-template" type="text/x-handlebars-template">
+{{ '{{#each data}}' }}
+
+  <article class="event nearest">
+    <figure class="date">
+        <div class="month">{{ '{{mon}}' }}</div>
+        <div class="day">{{ '{{day}}' }}</div>
+    </figure>
+    <aside>
+        <header> <a href="event-detail.html">{{ '{{name}}' }}</a> </header>
+        <div class="additional-info">{{ '{{venue}}' }}</div>
+    </aside>
+  </article>
+{{ '{{/each}}' }}
+</script>
+
+<script src="static/assets/js/api/manage_event.js"></script>
+
+{% endblock scripts %}

@@ -1,0 +1,60 @@
+
+ {% extends "a_frame.html" %}
+
+	     {% block title %} Manage events {% endblock title %}
+
+{% block head %} Manage Events {% endblock head %}
+
+	      {% block body %}
+
+
+<div class="panel panel-default">
+  	<div class="panel-title">Manage Events</div>
+  	<div class="panel-body">
+  		<table class="table table-striped">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Event</td>
+            <td>Date</td>
+            <td>Venue</td>
+          </tr>
+        </thead> 
+        <tbody id="adminos">
+         
+        </tbody> 
+      </table>
+  	</div>
+  </div>
+  
+  </div> 
+  <!-- End First Row -->
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+    {% endblock %}
+
+{% block scripts %}
+<script id="a-template" type="text/x-handlebars-template">
+{{ '{{#each data}}' }}
+            <tr>
+            <td>{{ '{{id}}' }}</td>
+            <!-- <td>{{ '{{name}}' }}</td> -->
+<!--            <form id="admin_{{ '{{id}}' }}">-->
+           <td>
+              <input type="text" value="{{ '{{name}}' }}" name="data[name]" placeholder="Event Name"  id="user_{{ '{{id}}' }}">
+            </td>
+                <input type="hidden" id="event_id_{{'{{id}}'}}" value="{{'{{id}}'}}">
+            <td><input type="date" name="data[date]" value="{{ '{{date}}' }}" id="date_{{ '{{id}}' }}"></td>
+ -->        <td><input type="text" name="data[venue]" value="{{ '{{venue}}' }}" id="venue_{{ '{{id}}' }}"></td>
+            <td><a href="#" onclick="update_event('{{ '{{id}}' }}');" class="btn btn-rounded btn-success">Save</a></td>
+            <td><a href="#" class="btn btn-rounded btn-danger" onclick="delete_event('{{ '{{id}}' }}');" >Delete</a></td>
+<!--            </form>-->
+            </tr>
+{{ '{{/each}}' }}
+      `
+</script>
+<script src="static/assets/js/api/manage-event.js"></script>
+{% endblock scripts %}

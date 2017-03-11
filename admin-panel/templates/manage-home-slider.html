@@ -1,0 +1,58 @@
+
+ {% extends "a_frame.html" %}
+
+	     {% block title %} Manage News {% endblock title %}
+
+{% block head %} Manage News {% endblock head %}
+
+	      {% block body %}
+
+
+<div class="panel panel-default">
+  	<div class="panel-title">Manage News</div>
+  	<div class="panel-body">
+  		<table class="table table-striped">
+        <thead>
+          <tr>
+            <td>Id</td>
+            <td>Date</td>
+            <td>Title</td>
+        
+          </tr>
+        </thead> 
+        <tbody id="newss">
+         
+        </tbody> 
+      </table>
+  	</div>
+  </div>
+  
+  </div> 
+  <!-- End First Row -->
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+    {% endblock %}
+
+{% block scripts %}
+<script id="news-template" type="text/x-handlebars-template">
+{{ '{{#each data}}' }}
+            <tr>
+            <td>{{ '{{id}}' }}</td>
+<!--            <form id="admin_{{ '{{id}}' }}">-->
+           <td>
+              <input type="text" value="{{ '{{date}}' }}" name="data[date]" placeholder=""  id="date_{{ '{{id}}' }}">
+            </td>
+                <input type="hidden" id="user_id_{{'{{id}}'}}" value="{{'{{id}}'}}">
+            <td><input type="text" name="data[title]" value="{{ '{{title}}' }}" id="title_{{ '{{id}}' }}"></td>
+            <td><a href="#" onclick="update_news('{{ '{{id}}' }}');" class="btn btn-rounded btn-success">Save</a></td>
+            <td><a href="#" class="btn btn-rounded btn-danger" onclick="delete_news('{{ '{{id}}' }}');" >Delete</a></td>
+<!--            </form>-->
+            </tr>
+{{ '{{/each}}' }}
+      `
+</script>
+<script src="static/assets/js/api/manage-news.js"></script>
+{% endblock scripts %}
